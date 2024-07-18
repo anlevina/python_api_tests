@@ -44,9 +44,11 @@ jobs:
 
     - name: Install allure
       run: |
-        sudo apt-add-repository ppa:qameta/allure
         sudo apt-get update
-        sudo apt-get install allure
+        sudo apt-get install -y openjdk-11-jre
+        curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        npm install -g allure-commandline --save-dev
 
     - name: Generate allure report
       run: |
