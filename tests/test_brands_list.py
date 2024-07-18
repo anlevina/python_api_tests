@@ -4,12 +4,22 @@ from scr.enums.global_enums import BrandErrorMessages
 
 
 def test_get_brands_list_success(get_brand_response):
+    """
+    POSITIVE TEST
+    Sending GET brands list request.
+    Validating response body, status and response codes.
+    """
 
     response = Response(get_brand_response)
     response.assert_status_code(200).assert_response_code(200).validate(GetBrandsListResponse)
 
 
 def test_put_brand_failure(put_brand_response):
+    """
+    NEGATIVE TEST
+    Sending PUT brands request.
+    Validating message in response body, status and response codes.
+    """
 
     response = Response(put_brand_response)
     (response.assert_status_code(200).assert_response_code(405)

@@ -18,6 +18,11 @@ def get_user_details_by_email(email):
     Users.empty_parameters_user_data
 ])
 def test_create_user_account_success(post_user_account_response, user_data):
+    """
+    POSITIVE TEST
+    Sending POST create account request.
+    Validating message in response body, status and response codes.
+    """
     response = Response(post_user_account_response)
     (response.assert_response_code(201).assert_status_code(200)
      .assert_message(UserAccountSuccessMessages.CREATE_USER_SUCCESS.value))
@@ -27,6 +32,11 @@ def test_create_user_account_success(post_user_account_response, user_data):
     Users.no_email_user_data
 ])
 def test_create_user_account_no_email_failure(post_user_account_response, user_data):
+    """
+    NEGATIVE TEST
+    Sending POST create account request without email parameter.
+    Validating message in response body, status and response codes.
+    """
     response = Response(post_user_account_response)
     (response.assert_response_code(400).assert_status_code(200)
      .assert_message(UserAccountErrorMessages.POST_NO_EMAIL_USER_FAILURE.value))
@@ -37,7 +47,13 @@ def test_create_user_account_no_email_failure(post_user_account_response, user_d
 ])
 def test_update_user_account_success(post_user_account_response, put_user_account_response,
                                      user_data, changed_user_data, data_object, expected_value):
-
+    """
+    POSITIVE TEST
+    Sending POST create account request.
+    Sending PUT update account request.
+    Validating messages in response body, status and response codes.
+    Checking that changes from PUT request were applied.
+    """
     response = Response(put_user_account_response)
     (response.assert_response_code(200).assert_status_code(200)
      .assert_message(UserAccountSuccessMessages.UPDATE_USER_SUCCESS.value))
@@ -57,7 +73,11 @@ def test_update_user_account_success(post_user_account_response, put_user_accoun
 ])
 def test_update_user_account_invalid_data_failure(put_user_account_response,
                                                   changed_user_data, response_code, message):
-
+    """
+    NEGATIVE TEST
+    Sending PUT update account request with incorrect parameters.
+    Validating messages in response body, status and response codes.
+    """
     response = Response(put_user_account_response)
     (response.assert_response_code(response_code).assert_status_code(200)
      .assert_message(message))

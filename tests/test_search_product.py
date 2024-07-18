@@ -14,6 +14,11 @@ from scr.test_data.test_data_search_product import SearchProduct
     SearchProduct.search_product_empty_list
 ])
 def test_post_search_product_success(post_search_product_response, form_data):
+    """
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    """
     post_response = Response(post_search_product_response)
     (post_response.assert_status_code(200).assert_response_code(200)
      .validate(GetSearchProductResponse))
@@ -24,6 +29,11 @@ def test_post_search_product_success(post_search_product_response, form_data):
     SearchProduct.search_product_empty_data
 ])
 def test_post_search_product_failure(post_search_product_response, form_data):
+    """
+    NEGATIVE TEST
+    Sending POST search products request with incorrect parameter.
+    Validating message in response body, status and response codes.
+    """
     post_response = Response(post_search_product_response)
     (post_response.assert_status_code(200).assert_response_code(400)
      .assert_message(SearchProductErrorMessages.POST_SEARCH_PRODUCT_MISSING_PARAMETER.value))

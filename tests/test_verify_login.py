@@ -9,6 +9,12 @@ from scr.test_data.test_data_users import Users
     (Users.extended_user_data, Users.basic_user_data)
 ])
 def test_verify_login_success(post_user_account_response, post_verify_login_response, user_data, verification_data):
+    """
+    POSITIVE TEST
+    Sending POST create account request.
+    Sending POST verify account request.
+    Validating message in response body, status and response codes.
+    """
     response = Response(post_verify_login_response)
     (response.assert_response_code(200).assert_status_code(200)
      .assert_message(VerifyLoginSuccessMessages.VERIFY_LOGIN_SUCCESS.value))
@@ -20,6 +26,11 @@ def test_verify_login_success(post_user_account_response, post_verify_login_resp
     Users.no_email_user_data
 ])
 def test_verify_login_incomplete_data_failure(post_verify_login_response, verification_data):
+    """
+    NEGATIVE TEST
+    Sending POST verify account request with absent parameters.
+    Validating message in response body, status and response codes.
+    """
     response = Response(post_verify_login_response)
     (response.assert_response_code(400).assert_status_code(200)
      .assert_message(VerifyLoginErrorMessages.VERIFY_LOGIN_NO_EMAIL_OR_PASSWORD.value))
@@ -29,12 +40,22 @@ def test_verify_login_incomplete_data_failure(post_verify_login_response, verifi
     Users.invalid_basic_user_data
 ])
 def test_verify_login_invalid_data_failure(post_verify_login_response, verification_data):
+    """
+    NEGATIVE TEST
+    Sending POST verify account request with incorrect parameters.
+    Validating message in response body, status and response codes.
+    """
     response = Response(post_verify_login_response)
     (response.assert_response_code(404).assert_status_code(200)
      .assert_message(VerifyLoginErrorMessages.VERIFY_LOGIN_USER_NOT_FOUND.value))
 
 
 def test_delete_verify_login_failure(delete_verify_login_response):
+    """
+    NEGATIVE TEST
+    Sending DELETE verify account request.
+    Validating message in response body, status and response codes.
+    """
     response = Response(delete_verify_login_response)
     (response.assert_response_code(405).assert_status_code(200)
      .assert_message(VerifyLoginErrorMessages.VERIFY_LOGIN_METHOD_NOT_SUPPORTED.value))
