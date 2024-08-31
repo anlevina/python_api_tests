@@ -1,0 +1,124 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Aug 31 10:02:52 GMT 2024","Sat Aug 31 10:02:52 GMT 2024","0","tests","test_verify_login","","","","test_verify_login_success[user_data0-verification_data0]","
+    POSITIVE TEST
+    Sending POST create account request.
+    Sending POST verify account request.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:48 GMT 2024","Sat Aug 31 10:02:48 GMT 2024","1","tests","test_search_product","","","","test_post_search_product_failure[form_data0]","
+    NEGATIVE TEST
+    Sending POST search products request with incorrect parameter.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:51 GMT 2024","Sat Aug 31 10:02:51 GMT 2024","1","tests","test_user_account","","","","test_update_user_account_invalid_data_failure[changed_user_data2-400-Bad request, password parameter is missing in PUT request.]","
+    NEGATIVE TEST
+    Sending PUT update account request with incorrect parameters.
+    Validating messages in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:47 GMT 2024","Sat Aug 31 10:02:47 GMT 2024","0","tests","test_search_product","","","","test_post_search_product_success[form_data4]","
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:46 GMT 2024","Sat Aug 31 10:02:46 GMT 2024","0","tests","test_brands_list","","","","test_put_brand_failure","
+    NEGATIVE TEST
+    Sending PUT brands request.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:46 GMT 2024","Sat Aug 31 10:02:46 GMT 2024","0","tests","test_products_list","","","","test_post_product_failure","
+    NEGATIVE TEST
+    Sending POST product request.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:47 GMT 2024","Sat Aug 31 10:02:47 GMT 2024","0","tests","test_search_product","","","","test_post_search_product_success[form_data2]","
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:48 GMT 2024","Sat Aug 31 10:02:48 GMT 2024","0","tests","test_user_account","","","","test_create_user_account_success[user_data0]","
+    POSITIVE TEST
+    Sending POST create account request.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:52 GMT 2024","Sat Aug 31 10:02:52 GMT 2024","1","tests","test_verify_login","","","","test_verify_login_incomplete_data_failure[verification_data0]","
+    NEGATIVE TEST
+    Sending POST verify account request with absent parameters.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:51 GMT 2024","Sat Aug 31 10:02:51 GMT 2024","1","tests","test_user_account","","","","test_update_user_account_invalid_data_failure[changed_user_data0-404-Account not found!]","
+    NEGATIVE TEST
+    Sending PUT update account request with incorrect parameters.
+    Validating messages in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:45 GMT 2024","Sat Aug 31 10:02:45 GMT 2024","0","tests","test_brands_list","","","","test_get_brands_list_success","
+    POSITIVE TEST
+    Sending GET brands list request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:53 GMT 2024","Sat Aug 31 10:02:53 GMT 2024","0","tests","test_verify_login","","","","test_delete_verify_login_failure","
+    NEGATIVE TEST
+    Sending DELETE verify account request.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:47 GMT 2024","Sat Aug 31 10:02:47 GMT 2024","1","tests","test_search_product","","","","test_post_search_product_success[form_data1]","
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:52 GMT 2024","Sat Aug 31 10:02:52 GMT 2024","0","tests","test_verify_login","","","","test_verify_login_incomplete_data_failure[verification_data1]","
+    NEGATIVE TEST
+    Sending POST verify account request with absent parameters.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:53 GMT 2024","Sat Aug 31 10:02:53 GMT 2024","0","tests","test_verify_login","","","","test_verify_login_invalid_data_failure[verification_data0]","
+    NEGATIVE TEST
+    Sending POST verify account request with incorrect parameters.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:50 GMT 2024","Sat Aug 31 10:02:50 GMT 2024","256","tests","test_user_account","","","","test_update_user_account_success[user_data0-changed_user_data0-name-Changes]","
+    POSITIVE TEST
+    Sending POST create account request.
+    Sending PUT update account request.
+    Validating messages in response body, status and response codes.
+    Checking that changes from PUT request were applied.
+    "
+"passed","Sat Aug 31 10:02:46 GMT 2024","Sat Aug 31 10:02:46 GMT 2024","0","tests","test_products_list","","","","test_get_products_list_success","
+    POSITIVE TEST
+    Sending GET products list request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:51 GMT 2024","Sat Aug 31 10:02:51 GMT 2024","0","tests","test_user_account","","","","test_update_user_account_invalid_data_failure[changed_user_data1-400-Bad request, email parameter is missing in PUT request.]","
+    NEGATIVE TEST
+    Sending PUT update account request with incorrect parameters.
+    Validating messages in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:48 GMT 2024","Sat Aug 31 10:02:48 GMT 2024","0","tests","test_search_product","","","","test_post_search_product_failure[form_data1]","
+    NEGATIVE TEST
+    Sending POST search products request with incorrect parameter.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:53 GMT 2024","Sat Aug 31 10:02:53 GMT 2024","0","tests","test_verify_login","","","","test_verify_login_incomplete_data_failure[verification_data2]","
+    NEGATIVE TEST
+    Sending POST verify account request with absent parameters.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:47 GMT 2024","Sat Aug 31 10:02:47 GMT 2024","1","tests","test_search_product","","","","test_post_search_product_success[form_data3]","
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:47 GMT 2024","Sat Aug 31 10:02:47 GMT 2024","0","tests","test_search_product","","","","test_post_search_product_success[form_data0]","
+    POSITIVE TEST
+    Sending POST search products request.
+    Validating response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:49 GMT 2024","Sat Aug 31 10:02:49 GMT 2024","0","tests","test_user_account","","","","test_create_user_account_no_email_failure[user_data0]","
+    NEGATIVE TEST
+    Sending POST create account request without email parameter.
+    Validating message in response body, status and response codes.
+    "
+"passed","Sat Aug 31 10:02:49 GMT 2024","Sat Aug 31 10:02:49 GMT 2024","0","tests","test_user_account","","","","test_create_user_account_success[user_data1]","
+    POSITIVE TEST
+    Sending POST create account request.
+    Validating message in response body, status and response codes.
+    "

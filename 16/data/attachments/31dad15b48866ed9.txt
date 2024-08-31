@@ -1,0 +1,2 @@
+Create user response: {'responseCode': 201, 'message': 'User created!'}
+Delete user response: {'responseCode': 200, 'message': 'Account deleted!'}

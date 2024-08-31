@@ -1,0 +1,4 @@
+Create user response: {'responseCode': 201, 'message': 'User created!'}
+Update user response: {'responseCode': 200, 'message': 'User updated!'}
+Check updated user: {'responseCode': 200, 'user': {'id': 394272, 'name': 'Changes', 'email': 'antest1@aa.com', 'title': 'Mrs', 'birth_day': '03', 'birth_month': '10', 'birth_year': '1966', 'first_name': 'Bob', 'last_name': 'Ivanov', 'company': 'Wallester', 'address1': '175 5th Ave', 'address2': 'test', 'country': 'United States', 'state': 'NY', 'city': 'New York', 'zipcode': '10010'}}
+Delete user response: {'responseCode': 200, 'message': 'Account deleted!'}
