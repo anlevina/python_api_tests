@@ -1,0 +1,2 @@
+Create user response: {'responseCode': 400, 'message': 'Bad request, email parameter is missing in POST request.'}
+Delete user response: {'responseCode': 404, 'message': 'Account not found!'}
