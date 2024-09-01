@@ -1,3 +1,4 @@
+import allure
 import requests
 import pytest
 
@@ -8,11 +9,13 @@ from scr.baseclasses.response_validation import Response
 from scr.enums.global_enums import UserAccountSuccessMessages, UserAccountErrorMessages
 
 
+@allure.step('Get user by email parameter')
 def get_user_details_by_email(email):
     get_user_details_response = requests.get(url=f'{BASE_URL}/{GET_USER_DETAIL_ENDPOINT}', params=email)
     return get_user_details_response
 
 
+@allure.title('Positive test - create user')
 @pytest.mark.parametrize("user_data", [
     Users.extended_user_data,
     Users.empty_parameters_user_data
@@ -23,6 +26,7 @@ def test_create_user_account_success(post_user_account_response, user_data):
      .assert_message(UserAccountSuccessMessages.CREATE_USER_SUCCESS.value))
 
 
+@allure.title('Negative test - create user')
 @pytest.mark.parametrize("user_data", [
     Users.no_email_user_data
 ])
@@ -32,6 +36,7 @@ def test_create_user_account_no_email_failure(post_user_account_response, user_d
      .assert_message(UserAccountErrorMessages.POST_NO_EMAIL_USER_FAILURE.value))
 
 
+@allure.title('Positive test - update user')
 @pytest.mark.parametrize("user_data, changed_user_data, data_object, expected_value", [
     (Users.extended_user_data, Users.changed_user_data, 'name', 'Changes')
 ])
@@ -50,6 +55,7 @@ def test_update_user_account_success(post_user_account_response, put_user_accoun
     assert get_user_details_response.json()['user'][data_object] == expected_value
 
 
+@allure.title('Negative test - update user')
 @pytest.mark.parametrize("changed_user_data, response_code, message", [
     (Users.invalid_basic_user_data, 404, UserAccountErrorMessages.PUT_ACCOUNT_NOT_FOUND_FAILURE.value),
     (Users.no_email_user_data, 400, UserAccountErrorMessages.PUT_NO_EMAIL_USER_FAILURE.value),

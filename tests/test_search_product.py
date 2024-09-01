@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from scr.pydantic_schemas.get_search_product import GetSearchProductResponse
@@ -6,6 +7,7 @@ from scr.enums.global_enums import SearchProductErrorMessages
 from scr.test_data.test_data_search_product import SearchProduct
 
 
+@allure.title('Positive test for POST search product')
 @pytest.mark.parametrize("form_data", [
     SearchProduct.search_product,
     SearchProduct.search_product_two_parameters,
@@ -19,6 +21,7 @@ def test_post_search_product_success(post_search_product_response, form_data):
      .validate(GetSearchProductResponse))
 
 
+@allure.title('Negative test for POST search product')
 @pytest.mark.parametrize("form_data", [
     SearchProduct.search_product_wrong_parameter_name,
     SearchProduct.search_product_empty_data
