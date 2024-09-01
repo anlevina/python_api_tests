@@ -2,12 +2,12 @@
 
 This project covers with API tests these endpoints https://automationexercise.com/api_list
 
-The project was created to demonstrate skills in working with APIs: sending various types of requests and handling responses. Naturally, in real projects, comprehensive API tests should cover predefined flows.
+The project was created to demonstrate proficiency in sending various types of requests and handling responses. Naturally, in real projects, comprehensive API tests should cover predefined flows.
 
 If you want to run the project locally, please use the following command:
 > pytest -s -m
 > 
-And the following command if you want to generate a report locally:
+And the following commands if you want to generate a report locally:
 
 > pytest --alluredir="allure_results"
 > 
